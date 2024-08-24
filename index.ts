@@ -60,25 +60,6 @@ async function main() {
     else {
         console.log("Please cd into the directory you want to download and make sure it is empty")
         return;
-        // todo
-        // await prompts({
-        //     name: "target_directory",
-        //     type: "autocompleteMultiselect",
-        //     message: "Where do you want to create the project?",
-        //     choices: [
-        //         {
-        //             title: "Current Directory",
-        //             description: ".",
-        //             selected: true,
-        //             value: "."
-        //         },
-        //         {
-    
-        //         }
-        //     ]
-            
-        // })
-
     }
 
 
