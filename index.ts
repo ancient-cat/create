@@ -42,11 +42,15 @@ async function main() {
 
     if (result.proceed) {
 
-        console.log(`Cloning "${targetRepo}" into "${cwd}"`);
+        console.log(`Cloning "${targetRepo}" into "${cwd}"...`);
         await downloadRepo(targetRepo, cwd)
         try {
+            console.log("Removing .git reference...")
             const result = await rimraf(path.join(cwd, "/.git"));
-            console.log("Removed .git reference")
+            console.log("\nDone!\n")
+            console.log("1. npm install — Install the project dependencies.")
+            console.log("2. npm run dev — Run a dev server")
+            console.log("3. npm run love — Preview a the latest game build")
         }
         catch (ex) {
             console.error(ex);
